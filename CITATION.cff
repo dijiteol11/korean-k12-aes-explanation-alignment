@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this anonymized package, please cite the associated manuscript."
+title: "Korean K-12 AES Explanation Alignment"
+version: "1.0.0-anonymized"
+date-released: "2026-06-04"
+authors:
+  - family-names: "Anonymous"
+    given-names: "Authors"

@@ -1,0 +1,30 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj
+4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+5 0 obj << /Length 692 >> stream
+1 1 1 rg 0 0 792 612 re f
+0 0 0 rg /F1 18 Tf 72 560 Td (Figure 1. Nonzero operational alignment by trait type) Tj
+0 0 0 rg /F1 11 Tf 72 525 Td (Expository: Surface 7.1%, Discourse 8.2%, Content 0.04%) Tj
+0 0 0 rg /F1 11 Tf 72 507 Td (Persuasive: Surface 6.7%, Discourse 4.5%, Content 0.09%) Tj
+0 0 0 rg /F1 11 Tf 72 489 Td (See data/derived_public/figure1_trait_type_nonzero_alignment.csv for values.) Tj
+0.298 0.471 0.659 rg 90.0 380.0 50.0 142.0 re f
+0.961 0.522 0.094 rg 150.0 388.0 50.0 134.0 re f
+0.298 0.471 0.659 rg 260.0 358.0 50.0 164.0 re f
+0.961 0.522 0.094 rg 320.0 432.0 50.0 90.0 re f
+0.298 0.471 0.659 rg 430.0 521.0 50.0 1.0 re f
+0.961 0.522 0.094 rg 490.0 520.0 50.0 2.0 re f
+endstream endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+1054
+%%EOF

@@ -1,0 +1,7 @@
+﻿__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+.ipynb_checkpoints/
+/data/restricted_not_shared/raw/
+/reports/private/

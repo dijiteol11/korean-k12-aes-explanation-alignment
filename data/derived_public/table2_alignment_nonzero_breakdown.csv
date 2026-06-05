@@ -1,0 +1,7 @@
+purpose,trait_type,trait,n,positive_count,positive_percent,zero_count,zero_percent
+expository,Surface,expression_2,2709,193,7.1,2516,92.9
+expository,Discourse,organization_1,2709,222,8.2,2487,91.8
+expository,Content,content_1,2709,1,0.04,2708,99.96
+persuasive,Surface,expression_2,2151,145,6.7,2006,93.3
+persuasive,Discourse,organization_1,2151,97,4.5,2054,95.5
+persuasive,Content,content_1,2151,2,0.09,2149,99.91

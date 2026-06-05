@@ -1,0 +1,1 @@
+This redacted registry records reproducibility facts without provider identifiers or local filesystem paths. Scorer: date-stamped commercial LLM, temperature 0.0. Call mode: batch execution, stage-sequential A to B to C. Public derived outputs: aggregate CSV tables under `data/derived_public/`.
