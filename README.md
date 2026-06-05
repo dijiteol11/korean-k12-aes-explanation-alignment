@@ -4,6 +4,8 @@ This repository is an anonymized reproducibility package for a manuscript on sco
 
 It includes anonymous manuscript files, redacted pre-registration copies, public aggregate result tables and figures, analysis code, and documentation for restricted corpus access. It excludes raw student essays, raw model outputs, provider logs, author/reviewer identities, local paths, and internal planning artifacts.
 
+The manuscript file is a compact anonymized review copy derived from a longer internal working draft; supplementary audit details are provided in `manuscript/supplement_anonymized.md`.
+
 ## Quick start
 
 ```bash

@@ -1,3 +1,4 @@
+# These SHAs are computed over redacted copies; they intentionally differ from the internal baseline due to anonymisation per docs/REDACTION_LOG.md.
 586e948813b86af8a0486d44e3f65099b48407986729b963e3123b5c75d69d22  decision_table_preregistered.md
 e3168912cc96cb83ed89c7187ea365ed157557f88ff892a6a0d493594b035df0  family_rubric_mapping_preregistered.md
 1ef21efab3068fa561cf923f8816cc02a3d0a1dcff516c336400cc9a2aeef54a  main_contrast_preregistered_v1.3.md
