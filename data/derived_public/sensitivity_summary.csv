@@ -1,6 +1,0 @@
-axis,convention_or_method,n,W,p,rank_biserial_r,median_surface,median_content
-empty_union,pre_registered_A0,4860,57750,1.96e-65,0.981,0.0,0.0
-empty_union,drop_both_empty,341,57750,1.96e-65,0.981,0.3333,0.0
-tie_handling,wilcox,4860,57750,1.96e-65,0.981,,
-tie_handling,pratt,4860,1585172,7.90e-74,0.981,,
-tie_handling,zsplit,4860,6691642,1.31e-19,0.981,,

@@ -1,8 +1,0 @@
-lex: lexical diversity and lexical choice indicators
-vocab_grade: vocabulary grade-level indicators
-case_marker: case marker and particle features
-morph_prop: morphological and part-of-speech proportion features
-syn: syntactic pattern features
-dis_nonSBERT: discourse and connective features not based on embeddings
-dis_SBERT: embedding-based discourse and coherence features
-meta: length and metadata-style features

@@ -1,15 +1,58 @@
-from __future__ import annotations
-import numpy as np
+"""
+Evaluation metrics for analytic trait prediction.
 
-def quadratic_weighted_kappa(y_true, y_pred, min_rating: int = 1, max_rating: int = 5) -> float:
-    y_true = np.asarray(y_true, dtype=int)
-    y_pred = np.asarray(y_pred, dtype=int)
-    n = max_rating - min_rating + 1
-    obs = np.zeros((n, n), dtype=float)
-    for a, b in zip(y_true, y_pred):
-        if min_rating <= a <= max_rating and min_rating <= b <= max_rating:
-            obs[a - min_rating, b - min_rating] += 1
-    expected = np.outer(obs.sum(axis=1), obs.sum(axis=0)) / max(obs.sum(), 1.0)
-    weights = np.fromfunction(lambda i, j: ((i - j) ** 2) / ((n - 1) ** 2), (n, n))
-    denom = (weights * expected).sum()
-    return 1.0 if denom == 0 else 1.0 - (weights * obs).sum() / denom
+The central metric is Quadratic Weighted Kappa (QWK), the de-facto
+standard for AES (Shermis & Burstein, 2013). Since our XGBoost outputs
+continuous regression values, we report QWK on scores rounded to the
+nearest integer in [1, 5], and also provide continuous correlation
+coefficients for transparency.
+"""
+from __future__ import annotations
+
+import numpy as np
+from sklearn.metrics import cohen_kappa_score, mean_absolute_error
+
+
+def clip_round(y: np.ndarray, lo: int = 1, hi: int = 5) -> np.ndarray:
+    """Round to nearest integer, clip to [lo, hi]."""
+    return np.clip(np.rint(np.asarray(y, dtype=float)), lo, hi).astype(int)
+
+
+def quadratic_weighted_kappa(
+    y_true: np.ndarray,
+    y_pred: np.ndarray,
+    labels: tuple[int, ...] = (1, 2, 3, 4, 5),
+) -> float:
+    """QWK on rounded predictions. Labels fixed to guard against
+    degenerate folds where some scores are absent."""
+    yt = clip_round(y_true, labels[0], labels[-1])
+    yp = clip_round(y_pred, labels[0], labels[-1])
+    try:
+        return float(
+            cohen_kappa_score(yt, yp, weights="quadratic", labels=list(labels))
+        )
+    except ValueError:
+        return float("nan")
+
+
+def regression_metrics(y_true: np.ndarray, y_pred: np.ndarray) -> dict[str, float]:
+    yt = np.asarray(y_true, dtype=float)
+    yp = np.asarray(y_pred, dtype=float)
+    # Guard for empty folds
+    if len(yt) == 0:
+        return {"n": 0, "qwk": float("nan"), "mae": float("nan"),
+                "rmse": float("nan"), "pearson_r": float("nan")}
+    mae = float(mean_absolute_error(yt, yp))
+    rmse = float(np.sqrt(np.mean((yt - yp) ** 2)))
+    # Correlation — undefined if a vector is constant
+    if np.std(yt) == 0 or np.std(yp) == 0:
+        pearson = float("nan")
+    else:
+        pearson = float(np.corrcoef(yt, yp)[0, 1])
+    return {
+        "n": int(len(yt)),
+        "qwk": quadratic_weighted_kappa(yt, yp),
+        "mae": mae,
+        "rmse": rmse,
+        "pearson_r": pearson,
+    }

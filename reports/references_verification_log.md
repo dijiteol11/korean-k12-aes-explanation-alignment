@@ -1,1 +1,0 @@
-Shermis & Burstein (2013): AES overview. Lundberg & Lee (2017): SHAP foundation. Mizumoto & Eguchi (2023): LLM as essay scorer in English L2 context. Nosek et al. (2018): pre-registration methodology. Ryoo, Cho, & Jo (2026): Korean AES context. Landis & Koch (1977): categorical agreement benchmark.

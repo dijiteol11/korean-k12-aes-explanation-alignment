@@ -1,1 +1,0 @@
-Essay count: 4,860. Stage-output rows: 14,580. Provider calls: 14,576. Deterministic local recoveries: 4. Missing outputs: 0. Duplicate essay identifiers: 0. Validator full-sweep exceptions after recovery: 0. Stage B null score maximum per trait: 3.8%. Stage C empty rationale rate: 0%.
