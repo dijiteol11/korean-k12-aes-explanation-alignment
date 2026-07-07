@@ -6,6 +6,10 @@
 
 증거 사슬: 원본 SHA(앵커됨) → 본 redaction(결정론적 스크립트 수행, 제거·치환 내역 본 문서에 명세) → 공개본 SHA.
 
+## Terminology note (internal working reports)
+
+공개된 내부 작업 보고서(reports/)에는 '사전등록'·'Pre-reg' 표기가 등장한다. 이는 SHA-256으로 동결된 사전 명세(pre-specified) 문서(prereg/)를 가리키는 내부 약칭이며, 본 연구는 외부 시간검증형 사전등록(예: OSF)을 보유하지 않는다(원고 Appendix C.4에 명시). 내부 보고서는 감사 무결성을 위해 작성 당시 원문 그대로(무수정) 공개한다.
+
 ## decision_table_preregistered_v1.1.md
 
 - 원본(내부, 비공개) SHA-256: `490df99a0b495028a166170ab7c31b59807ba0c4fd82d71f3908ecb7586d101f`
